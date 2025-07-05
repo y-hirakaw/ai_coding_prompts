@@ -3,7 +3,7 @@
 
 ### claude-code-index-prompts.md
 
-* Claude Codeでcursorライクなindexを作成させるプロンプト、作成したものをCLAUDE.mdに必ず読み込むよう指示します。
+* Claude Codeでcursorライクなindexを作成させるプロンプト
 * Spring Boot/iOS/Android/その他の情報でそれぞれindex.jsonファイルを作成させます。
 * 指示の仕方の例
   * claude-code-index-prompts.md の内容を確認し、その指示に従ってください。
