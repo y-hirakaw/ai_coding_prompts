@@ -188,3 +188,8 @@ If index is outdated, regenerate with appropriate prompt above
 4. **Token monitoring** - Keep under specified limits
 5. **English only** - All JSON content in English
 6. **CLAUDE.md placement** - Place in project root
+```
+
+# Save location
+
+`.claude/workspace/project_index/`
