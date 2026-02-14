@@ -1,6 +1,26 @@
 # ai_coding_prompts
 個人的なAI開発の際に利用するプロンプト集です。
 
+## design-prompts/
+
+ビジネス要求から技術設計書・PBIへ変換するパイプラインプロンプト群です。
+
+```
+[既存システム情報] → existing-system-profile-prompt.md → [システムプロファイル]
+                                                              ↓
+[ビジネス要求] → spec-to-technical-design-prompt.md ────→ [技術設計書]（新規構築）
+[ビジネス要求] → existing-system-design-prompt.md ─────→ [技術設計書]（既存改修）
+                                                              ↓
+                 technical-design-to-pbi-prompt.md ────→ [PBI / GitHub Issue]
+```
+
+### existing-system-profile-prompt.md
+
+* 既存システムのドキュメント（ヘルプページ、API仕様書、コード等）から改修設計に必要な情報を凝縮した「システムプロファイル」を作成するプロンプト
+* 改修設計の前工程として1回作成し、改修のたびに再利用可能
+* 技術スタック、API規約、DB設計パターン、認証モデル、セキュリティ基盤等を網羅した12セクション構成
+* 目標出力サイズ: 10000〜20000トークン
+
 ### spec-to-technical-design-prompt.md
 
 * ビジネス要求（Googleドキュメント等）を技術設計書に変換するプロンプト
@@ -22,6 +42,8 @@
 * MoSCoW優先度、MVPスコープ識別、カテゴリ別DoD、ユーザーストーリー形式を含む
 * Mermaid依存関係図、スプリント配置、リリース計画を出力
 * GitHub CLI一括登録用CSV/コマンド出力にも対応
+
+## その他
 
 ### claude-code-index-prompts.md
 
