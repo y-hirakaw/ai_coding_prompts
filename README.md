@@ -8,6 +8,14 @@
 * Gemini / NotebookLM / Claude いずれでも使用可能
 * 出力にはMermaid図（ER図、シーケンス図、状態遷移図）を含む
 
+### existing-system-design-prompt.md
+
+* 既存システムの改修・機能追加向けの技術設計書変換プロンプト
+* 認証・DB基盤等の既存資産を活用する前提で、差分設計と影響分析に特化
+* 変更分類マーカー（`[既存流用]`/`[既存拡張]`/`[新規追加]`/`[推論補完]`）で変更範囲を可視化
+* トランザクション整合性、セキュリティ影響分析、リリース後監視計画、品質ゲートを含む14セクション構成
+* 5エージェント（Backend/QA/PM/Security/DevOps）によるレビュー済み
+
 ### technical-design-to-pbi-prompt.md
 
 * 技術設計書からPBI/GitHub Issueに分割するプロンプト
